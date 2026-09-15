@@ -1,0 +1,41 @@
+{
+  "features": [
+    "route",
+    "weather",
+    "day",
+    "hour",
+    "minute",
+    "month",
+    "day_of_month",
+    "is_weekend",
+    "time_sin",
+    "time_cos"
+  ],
+  "routes": [
+    "Berger-Lagos Island"
+  ],
+  "weather_conditions": [
+    "Heavy Rain",
+    "Light/Moderate Rain",
+    "Partially cloudy",
+    "Rain, Partially cloudy",
+    "Wet Roads (residual)"
+  ],
+  "training_rows": 2308,
+  "test_rows": 578,
+  "data_start": "2026-04-20 00:00:00",
+  "data_end": "2026-06-04 23:45:00",
+  "metrics": {
+    "MAE": 0.07299837949775263,
+    "RMSE": 0.1372988681297179,
+    "R2": 0.8365680702720029
+  },
+  "target_min": 1.0,
+  "target_max": 3.62,
+  "level_rules": {
+    "Low": "ratio < 1.15",
+    "Moderate": "1.15 <= ratio < 1.40",
+    "High": "1.40 <= ratio < 1.80",
+    "Severe": "ratio >= 1.80"
+  }
+}
