@@ -216,7 +216,7 @@ elif page == 'Predict Traffic':
 
             easing = find_next_easing(model, metadata, route, weather, d, t, pred)
             if level in ('High', 'Severe'):
-                st.markdown('Smart departure suggestion')
+                st.markdown('### Smart departure suggestion')
                 if easing:
                     easing_dt = easing['datetime']
                     wait_text = format_wait(easing['wait_minutes'])
