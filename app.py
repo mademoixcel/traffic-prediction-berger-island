@@ -240,7 +240,7 @@ elif page == 'Predict Traffic':
                     )
                     ics = make_ics_reminder(reminder_dt, easing_dt, route)
 
-                    st.markdown("#### 🔔 Set a traffic reminder")
+                    st.markdown("#### Set a traffic reminder")
                     st.caption(
                         f"The reminder is set for {reminder_dt.strftime('%I:%M %p')}, "
                         f"15 minutes before the predicted easing time of {easing_dt.strftime('%I:%M %p')}."
@@ -249,14 +249,14 @@ elif page == 'Predict Traffic':
                     cal1, cal2 = st.columns(2)
                     with cal1:
                         st.link_button(
-                            "📅 Add to Google Calendar",
+                            "Add to Google Calendar",
                             google_calendar_url,
                             use_container_width=True,
                             help="Opens Google Calendar with the reminder details already filled in."
                         )
                     with cal2:
                         st.download_button(
-                            "⬇️ Download calendar reminder",
+                            "Download calendar reminder",
                             data=ics,
                             file_name="traffic_easing_reminder.ics",
                             mime="text/calendar",
@@ -265,9 +265,8 @@ elif page == 'Predict Traffic':
                         )
 
                     st.caption(
-                        "Google Calendar is the quickest option. The downloadable .ics file is a "
-                        "fallback for Apple Calendar, Outlook and other compatible calendar apps. "
-                        "The user still confirms the event before it is saved."
+                        "Google Calendar is the quickest option"
+                        
                     )
                 else:
                     st.warning(
